@@ -1,0 +1,22 @@
+/* Estilo para a galeria */
+.galeria {
+    display: flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Estilo para cada div de receita */
+  .receita {
+    width: calc(32% - 10px); /* 32% da largura com uma margem de 10px */
+    margin: 5px; /* Margem entre as divs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* Estilo para destacar a div de receita selecionada */
+  .receita:hover {
+    background-color: #f0f0f0;
+  }
+  
