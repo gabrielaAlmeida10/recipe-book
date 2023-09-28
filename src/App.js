@@ -4,7 +4,7 @@ import Gallery from './components/galleryView/Gallery';
 
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div>
       <Menu/>

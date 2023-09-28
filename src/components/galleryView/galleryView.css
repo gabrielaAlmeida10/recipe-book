@@ -1,22 +1,36 @@
-/* Estilo para a galeria */
-.galeria {
-    display: flexbox;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  /* Estilo para cada div de receita */
-  .receita {
-    width: calc(32% - 10px); /* 32% da largura com uma margem de 10px */
-    margin: 5px; /* Margem entre as divs */
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  /* Estilo para destacar a div de receita selecionada */
-  .receita:hover {
-    background-color: #f0f0f0;
-  }
-  
+ .gallery_container {
+  border: 1px solid rgb(226, 1, 1);
+ }
+
+
+.gallery {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 767px){
+    .gallery{
+      grid-template-columns: repeat(auto-fill, minmax(150px), 1fr);
+      gap: 5px;
+    }
+}
+
+.recipe{
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid black;
+  float: right;
+}
+
+.recipe:hover{
+  transform: scale(1.05s);
+} 
+
+.teste{
+  display: flex;
+}
