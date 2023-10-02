@@ -9,6 +9,7 @@ body{
   gap: 10px;
   text-align: center;
   background-color: #FFEBCD;
+  padding: 14px;
 }
 
 
@@ -27,6 +28,12 @@ body{
   float: right;
   background-color: white;
 }
+.recipe img {
+  max-width: 100%; /* A imagem não deve exceder a largura da div */
+  max-height: 200px; /* Altura máxima da imagem (ajuste conforme necessário) */
+  margin-bottom: 10px; /* Espaçamento inferior opcional */
+}
+
 
 .recipe:hover{
   transform: scale(1.05s);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./GalleryView.css";
 
+import Pao from '../../images/pao.jpg';
 
 // Dados de exemplo das receitas (você pode substituir isso por seus próprios dados)
 const receitas = [
@@ -14,6 +15,7 @@ const receitas = [
       "Carne moída",
     ],
     instrucoes: "Cozinhe a carne moída, monte as camadas e asse no forno.",
+    photo: Pao,
   },
   {
     id: 2,
@@ -21,34 +23,39 @@ const receitas = [
     ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
     instrucoes:
       "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
+    photo: "../../images/pao.jpg",
   },
   {
     id: 3,
-    nome: "Bolo de Chocolate",
+    nome: "Kibe Recheado",
     ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
     instrucoes:
       "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
+    photo: "../../images/pao.jpg",
   },
   {
     id: 4,
-    nome: "Bolo de Chocolate",
+    nome: "Panqueca",
     ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
     instrucoes:
       "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
+    photo: "../../images/pao.jpg",
   },
   {
     id: 5,
-    nome: "Bolo de Chocolate",
+    nome: "Canelone",
     ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
     instrucoes:
       "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
+    photo: "../../images/pao.jpg",
   },
   {
     id: 6,
-    nome: "Bolo de Chocolate",
+    nome: "Pizza",
     ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
     instrucoes:
       "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
+    photo: "../../images/pao.jpg",
   },
 ];
 
@@ -72,6 +79,7 @@ const Gallery = () => {
             className="recipe"
             onClick={() => mostrarDetalhes(receita)}
           >
+            <img src={receita.photo}  alt={`Foto de ${receita.nome}`} />
             <h3>{receita.nome}</h3>
           </div>
         ))}
