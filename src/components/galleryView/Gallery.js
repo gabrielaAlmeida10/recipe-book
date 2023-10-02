@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./galleryView.css";
+import "./GalleryView.css";
+
 
 // Dados de exemplo das receitas (você pode substituir isso por seus próprios dados)
 const receitas = [
@@ -64,29 +65,25 @@ const Gallery = () => {
 
   return (
     <div>
-      <h1>Galeria de Receitas</h1>
-        <div className="teste">teste</div>
-      <div className="gallery_container">
-        <div className="gallery">
-          {receitas.map((receita) => (
-            <div
-              key={receita.id}
-              className="recipe"
-              onClick={() => mostrarDetalhes(receita)}
-            >
-              <h3>{receita.nome}</h3>
-            </div>
-          ))}
-        </div>
-        {receitaSelecionada && (
-          <div className="detalhes-receita">
-            <button onClick={fecharDetalhes}>Fechar</button>
-            <h2>{receitaSelecionada.nome}</h2>
-            <p>Ingredientes: {receitaSelecionada.ingredientes.join(", ")}</p>
-            <p>Instruções: {receitaSelecionada.instrucoes}</p>
+      <div className="gallery">
+        {receitas.map((receita) => (
+          <div
+            key={receita.id}
+            className="recipe"
+            onClick={() => mostrarDetalhes(receita)}
+          >
+            <h3>{receita.nome}</h3>
           </div>
-        )}
+        ))}
       </div>
+      {receitaSelecionada && (
+        <div className="details">
+          <button onClick={fecharDetalhes}>X</button>
+          <h2>{receitaSelecionada.nome}</h2>
+          <p>Ingredientes: {receitaSelecionada.ingredientes.join(", ")}</p>
+          <p>Instruções: {receitaSelecionada.instrucoes}</p>
+        </div>
+      )}
     </div>
   );
 };

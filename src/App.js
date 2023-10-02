@@ -1,16 +1,17 @@
-import React from 'react';
-import Menu from './components/menu/Menu';
-import Gallery from './components/galleryView/Gallery';
+import React, { useState } from "react";
+import Menu from "./components/menu/Menu";
+import Gallery from "./components/galleryView/Gallery";
 
-import './App.css';
+
+import "./App.css";
 
 const App = () => {
   return (
     <div>
-      <Menu/>
+      <Menu />
       <Gallery />
     </div>
   );
-}
+};
 
 export default App;
