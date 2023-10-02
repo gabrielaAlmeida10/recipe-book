@@ -35,23 +35,7 @@ const receitas = [
   },
   {
     id: 4,
-    nome: "Panqueca",
-    ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
-    instrucoes:
-      "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
-    photo: "../../images/pao.jpg",
-  },
-  {
-    id: 5,
     nome: "Canelone",
-    ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
-    instrucoes:
-      "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
-    photo: "../../images/pao.jpg",
-  },
-  {
-    id: 6,
-    nome: "Pizza",
     ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
     instrucoes:
       "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
@@ -88,6 +72,7 @@ const Gallery = () => {
         <div className="details">
           <button onClick={fecharDetalhes}>X</button>
           <h2>{receitaSelecionada.nome}</h2>
+          <img src={receitaSelecionada.photo} alt={`Foto de ${receitaSelecionada.nome}`}/>
           <p>Ingredientes: {receitaSelecionada.ingredientes.join(", ")}</p>
           <p>Instruções: {receitaSelecionada.instrucoes}</p>
         </div>
