@@ -37,3 +37,13 @@
     transform: rotate(360deg);
   }
 }
+
+.filter{
+  float: left;
+    width: 25%;
+}
+
+.list{
+  float: left;
+  width: 50%; 
+}

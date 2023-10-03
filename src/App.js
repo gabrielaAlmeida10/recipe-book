@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React  from "react";
 import Menu from "./components/menu/Menu";
 import Gallery from "./components/galleryView/Gallery";
 
@@ -9,7 +9,8 @@ const App = () => {
   return (
     <div>
       <Menu />
-      <Gallery />
+      <div className="filter">Menu filter</div>
+      <Gallery className="list"/>
     </div>
   );
 };
