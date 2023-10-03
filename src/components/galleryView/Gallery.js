@@ -9,12 +9,14 @@ const receitas = [
     id: 1,
     nome: "Pão",
     ingredientes: [
-      "Massa de lasanha",
-      "Molho de tomate",
-      "Queijo",
-      "Carne moída",
+      "1 kg de farinha de trigo",
+      "Sal",
+      "1 xícara de óleo",
+      "2 copos de leite morno",
+      "1 colher (sopa) de fermento",
     ],
-    instrucoes: "Cozinhe a carne moída, monte as camadas e asse no forno.",
+    recheio: "O que quiser",
+    instrucoes: "Prepare a massa, recheie e asse",
     photo: Pao,
   },
   {
@@ -71,9 +73,10 @@ const Gallery = () => {
       {receitaSelecionada && (
         <div className="details">
           <button onClick={fecharDetalhes}>X</button>
-          <h2>{receitaSelecionada.nome}</h2>
           <img src={receitaSelecionada.photo} alt={`Foto de ${receitaSelecionada.nome}`}/>
+          <h2>{receitaSelecionada.nome}</h2>
           <p>Ingredientes: {receitaSelecionada.ingredientes.join(", ")}</p>
+          <p>Recheio: {receitaSelecionada.recheio}</p>
           <p>Instruções: {receitaSelecionada.instrucoes}</p>
         </div>
       )}
