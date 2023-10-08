@@ -1,0 +1,13 @@
+.filter {
+  background-color: rgb(204, 196, 196);
+  float: left;
+  width: 25%;
+  height: 100vh;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+

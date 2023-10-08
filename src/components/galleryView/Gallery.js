@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./GalleryView.css";
 
 import Pao from '../../images/pao.jpg';
+import GalleryFilter from "./GalleryFilter";
 
 // Dados de exemplo das receitas (você pode substituir isso por seus próprios dados)
 const receitas = [
   {
     id: 1,
+    type: "Pães",
     nome: "Pão",
     ingredientes: [
       "1 kg de farinha de trigo",
@@ -21,6 +23,7 @@ const receitas = [
   },
   {
     id: 2,
+    type: "Bolos",
     nome: "Bolo de Chocolate",
     ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
     instrucoes:
@@ -29,6 +32,7 @@ const receitas = [
   },
   {
     id: 3,
+    type: "Kibes",
     nome: "Kibe Recheado",
     ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
     instrucoes:
@@ -37,6 +41,7 @@ const receitas = [
   },
   {
     id: 4,
+    type: "Canelones",
     nome: "Canelone",
     ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
     instrucoes:
@@ -46,20 +51,28 @@ const receitas = [
 ];
 
 const Gallery = () => {
-  const [receitaSelecionada, setReceitaSelecionada] = useState(null);
+  const [selectedRecipie, setSelectedRecipie] = useState(null);
+  const [filter, setFilter] = useState("Todos");
 
   const mostrarDetalhes = (receita) => {
-    setReceitaSelecionada(receita);
+    setSelectedRecipie(receita);
   };
 
   const fecharDetalhes = () => {
-    setReceitaSelecionada(null);
+    setSelectedRecipie(null);
   };
 
+  const filtrarReceita = (type) => {
+    setFilter(type);
+  }
+
+  const filteredRecipes = filter === "Todos" ? receitas : receitas.filter(receita => receita.type === filter);
+
   return (
-    <div>
+    <div className="gallery-container">
+      <GalleryFilter onFilterChange={filtrarReceita}/>
       <div className="gallery">
-        {receitas.map((receita) => (
+        {filteredRecipes.map((receita) => (
           <div
             key={receita.id}
             className="recipe"
@@ -70,14 +83,14 @@ const Gallery = () => {
           </div>
         ))}
       </div>
-      {receitaSelecionada && (
+      {selectedRecipie && (
         <div className="details">
           <button onClick={fecharDetalhes}>X</button>
-          <img src={receitaSelecionada.photo} alt={`Foto de ${receitaSelecionada.nome}`}/>
-          <h2>{receitaSelecionada.nome}</h2>
-          <p>Ingredientes: {receitaSelecionada.ingredientes.join(", ")}</p>
-          <p>Recheio: {receitaSelecionada.recheio}</p>
-          <p>Instruções: {receitaSelecionada.instrucoes}</p>
+          <img src={selectedRecipie.photo} alt={`Foto de ${selectedRecipie.nome}`}/>
+          <h2>{selectedRecipie.nome}</h2>
+          <p>Ingredientes: {selectedRecipie.ingredientes.join(", ")}</p>
+          <p>Recheio: {selectedRecipie.recheio}</p>
+          <p>Instruções: {selectedRecipie.instrucoes}</p>
         </div>
       )}
     </div>

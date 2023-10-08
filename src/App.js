@@ -9,8 +9,7 @@ const App = () => {
   return (
     <div>
       <Menu />
-      <div className="filter">Menu filter</div>
-      <Gallery className="list"/>
+      <Gallery />
     </div>
   );
 };
