@@ -8,7 +8,7 @@ function routes() {
   return (
     <Routes>
        <Route path="/" element={<Gallery />} /> 
-       <Route path="/Gallery" element={<Gallery />} /> 
+       <Route path="/recipe-book" element={<Gallery />} /> 
        <Route path="/NewRecipe" element={<NewRecipe />} />
     </Routes>
   );

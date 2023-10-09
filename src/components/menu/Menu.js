@@ -7,7 +7,7 @@ const Menu = () => {
   return (
     <nav className="menu">
       <div className="brand-name"> 
-        <Link to="/Gallery">
+        <Link to="/recipe-book">
           <h1>Recipe Book</h1>
         </Link>
         <Link to="/NewRecipe">
