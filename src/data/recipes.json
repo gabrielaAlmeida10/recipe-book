@@ -1,26 +1,60 @@
 [
     {
-        "id": 0,
-        "title": "blablabla",
-        "ingredientes": "blablabla",
-        "make": "blabalba"
+      "id": 1,
+      "type": "Pães",
+      "nome": "Pão",
+      "ingredientes": [
+        "1 kg de farinha de trigo",
+        "Sal",
+        "1 xícara de óleo",
+        "2 copos de leite morno",
+        "1 colher (sopa) de fermento"
+      ],
+      "recheio": "O que quiser",
+      "instrucoes": "Prepare a massa, recheie e asse",
+      "photo": "images/pao.jpg" 
     },
     {
-        "id": 1,
-        "title": "blablabla",
-        "ingredientes": "blablabla",
-        "make": "blabalba"
+      "id": 2,
+      "type": "Bolos",
+      "nome": "Bolo de Chocolate",
+      "ingredientes": [
+        "Farinha",
+        "Açúcar",
+        "Chocolate em pó",
+        "Ovos",
+        "Leite"
+      ],
+      "instrucoes": "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
+      "photo": "images/boloChocolatejpg" 
     },
     {
-        "id": 2,
-        "title": "blablabla",
-        "ingredientes": "blablabla",
-        "make": "blabalba"
+      "id": 3,
+      "type": "Kibes",
+      "nome": "Kibe Recheado",
+      "ingredientes": [
+        "Farinha",
+        "Açúcar",
+        "Chocolate em pó",
+        "Ovos",
+        "Leite"
+      ],
+      "instrucoes": "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
+      "photo": "images/kibeRecheado.jpg" 
     },
     {
-        "id": 3,
-        "title": "blablabla",
-        "ingredientes": "blablabla",
-        "make": "blabalba"
+      "id": 4,
+      "type": "Canelones",
+      "nome": "Canelone",
+      "ingredientes": [
+        "Farinha",
+        "Açúcar",
+        "Chocolate em pó",
+        "Ovos",
+        "Leite"
+      ],
+      "instrucoes": "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
+      "photo": "images/canelone.jpg" 
     }
-]
+  ]
+  

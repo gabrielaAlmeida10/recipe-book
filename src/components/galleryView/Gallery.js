@@ -1,96 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+import GalleryFilter from "./GalleryFilter";
+import recipes from "../../data/recipes.json";
+
 import "./GalleryView.css";
 
-import Pao from '../../images/pao.jpg';
-import GalleryFilter from "./GalleryFilter";
-
-// Dados de exemplo das receitas (você pode substituir isso por seus próprios dados)
-const receitas = [
-  {
-    id: 1,
-    type: "Pães",
-    nome: "Pão",
-    ingredientes: [
-      "1 kg de farinha de trigo",
-      "Sal",
-      "1 xícara de óleo",
-      "2 copos de leite morno",
-      "1 colher (sopa) de fermento",
-    ],
-    recheio: "O que quiser",
-    instrucoes: "Prepare a massa, recheie e asse",
-    photo: Pao,
-  },
-  {
-    id: 2,
-    type: "Bolos",
-    nome: "Bolo de Chocolate",
-    ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
-    instrucoes:
-      "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
-    photo: "../../images/pao.jpg",
-  },
-  {
-    id: 3,
-    type: "Kibes",
-    nome: "Kibe Recheado",
-    ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
-    instrucoes:
-      "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
-    photo: "../../images/pao.jpg",
-  },
-  {
-    id: 4,
-    type: "Canelones",
-    nome: "Canelone",
-    ingredientes: ["Farinha", "Açúcar", "Chocolate em pó", "Ovos", "Leite"],
-    instrucoes:
-      "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
-    photo: "../../images/pao.jpg",
-  },
-];
-
 const Gallery = () => {
-  const [selectedRecipie, setSelectedRecipie] = useState(null);
+  const [recipe, setRecipe] = useState([]);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [filter, setFilter] = useState("Todos");
 
-  const mostrarDetalhes = (receita) => {
-    setSelectedRecipie(receita);
+  //load the data from the JSON
+  useEffect(() => {
+    setRecipe(recipes);
+  }, []);
+
+  const showDetails = (recipe) => {
+    setSelectedRecipe(recipe);
   };
 
-  const fecharDetalhes = () => {
-    setSelectedRecipie(null);
+  const closeDetails = () => {
+    setSelectedRecipe(null);
   };
 
-  const filtrarReceita = (type) => {
+  const filterRecipe = (type) => {
     setFilter(type);
   }
 
-  const filteredRecipes = filter === "Todos" ? receitas : receitas.filter(receita => receita.type === filter);
+  const filteredRecipes = filter === "Todos" ? recipe : recipe.filter(recipe => recipe.type === filter);
 
   return (
     <div className="gallery-container">
-      <GalleryFilter onFilterChange={filtrarReceita}/>
+      <GalleryFilter onFilterChange={filterRecipe}/>
       <div className="gallery">
-        {filteredRecipes.map((receita) => (
+        {filteredRecipes.map((recipe) => (
           <div
-            key={receita.id}
+            key={recipe.id}
             className="recipe"
-            onClick={() => mostrarDetalhes(receita)}
+            onClick={() => showDetails(recipe)}
           >
-            <img src={receita.photo}  alt={`Foto de ${receita.nome}`} />
-            <h3>{receita.nome}</h3>
+            <img src={recipe.photo}  alt={`Foto de ${recipe.nome}`} />
+            <h3>{recipe.nome}</h3>
           </div>
         ))}
       </div>
-      {selectedRecipie && (
+      {selectedRecipe && (
         <div className="details">
-          <button onClick={fecharDetalhes}>X</button>
-          <img src={selectedRecipie.photo} alt={`Foto de ${selectedRecipie.nome}`}/>
-          <h2>{selectedRecipie.nome}</h2>
-          <p>Ingredientes: {selectedRecipie.ingredientes.join(", ")}</p>
-          <p>Recheio: {selectedRecipie.recheio}</p>
-          <p>Instruções: {selectedRecipie.instrucoes}</p>
+          <button onClick={closeDetails}>X</button>
+          <img src={selectedRecipe.photo} alt={`Foto de ${selectedRecipe.nome}`}/>
+          <h2>{selectedRecipe.nome}</h2>
+          <p>Ingredientes: {selectedRecipe.ingredientes.join(", ")}</p>
+          <p>Recheio: {selectedRecipe.recheio}</p>
+          <p>Instruções: {selectedRecipe.instrucoes}</p>
         </div>
       )}
     </div>
