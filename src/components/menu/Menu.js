@@ -13,6 +13,9 @@ const Menu = () => {
         <Link to="/NewRecipe">
           <h3>New Recipe</h3>
         </Link>
+        <Link to="/OrderList">
+          <h3>Order</h3>
+        </Link>
       </div>
     </nav>
   );

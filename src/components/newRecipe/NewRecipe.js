@@ -1,11 +1,10 @@
 // NewRecipe.js
-import React, { useState } from "react";
+import React  from "react";
 import RecipeForm from "./RecipeForm";
 
 import "./NewRecipe.css";
 
 const NewRecipe = (props) => {
-  const [isEditing, setIsEditing] = useState(true);
 
   const saveRecipeDataHandler = (enteredRecipeData) => {
     const recipeData = {
@@ -13,7 +12,6 @@ const NewRecipe = (props) => {
       id: Math.random().toString(),
     };
     console.log(recipeData);
-    setIsEditing(false);
   };
 
   return (
