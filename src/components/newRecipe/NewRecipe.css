@@ -1,0 +1,38 @@
+.new-recipe{
+    background-color:rgb(89, 140, 243);
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-recipe button{
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solidrgb(204, 204, 255);
+    background-color:rgb(255, 255, 102);
+    color: black;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.new-recipe button:hover,
+.new-recipe button:active{
+    background-color:rgb(255, 255, 102);
+    border-color:rgb(255, 255, 102);
+}
+
+.new-recipe button.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  .new-recipe button.alternative:hover,
+  .new-recipe button.alternative:active {
+    background-color: #ddb3f8;
+  }

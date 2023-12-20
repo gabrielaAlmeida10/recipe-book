@@ -1,16 +1,17 @@
-import React  from "react";
-import Menu from "./components/menu/Menu";
-import Gallery from "./components/galleryView/Gallery";
+import React from "react";
+import Routes from "./routes";
+import { BrowserRouter } from "react-router-dom";
 
+import Menu from "./components/menu/Menu";
 
 import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <BrowserRouter>
       <Menu />
-      <Gallery />
-    </div>
+      <Routes />
+    </BrowserRouter>
   );
 };
 

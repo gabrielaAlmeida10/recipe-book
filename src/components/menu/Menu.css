@@ -4,36 +4,39 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding: 0.5rem 0.5rem;
-    background-color: #ebb769;
+    padding: 0 1rem;
+    background-color:rgb(128, 212, 255);
     color: black;
     box-shadow:  0 2px 2px 2px rgba(9, 9, 9, 0.23);
 }
 
 .brand-name{
+    display: flex;
+    align-items: center;
+}
+
+.brand-name h1{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.brand-name  h3 {
+    font-size: 1.2rem; /* Tamanho menor para os links */
+    margin-left: 1rem; /* Adicionei margem à esquerda para separar os links */
     text-decoration: none;
     color: black;
-    font-size: 1.3rem;
-    margin-left: 1rem;
 }
 
-.navigation-menu{
-    margin-left: auto;
+.brand-name  h3:hover {
+    text-decoration: underline; /* Sublinhe os links ao passar o mouse */
 }
 
-.navigation-menu ul{
-    display: flex;
-    padding: 0;
-}
-
-.navigation-menu li{
-    list-style-type: none;
-    margin: 0 1rem;
-}
-
-.navigation-menu li a{
+.brand-name a {
     text-decoration: none;
-
-    width: 100%;
+    color: black;
+    margin-left: 1rem; /* Adicionei margem à esquerda para separar os links */
 }
 
+.brand-name a:hover {
+    text-decoration: underline; /* Sublinhe os links ao passar o mouse */
+}

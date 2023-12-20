@@ -11,8 +11,7 @@
         "1 colher (sopa) de fermento"
       ],
       "recheio": "O que quiser",
-      "instrucoes": "Prepare a massa, recheie e asse",
-      "photo": "images/pao.jpg" 
+      "instrucoes": "Prepare a massa, recheie e asse"
     },
     {
       "id": 2,
@@ -25,8 +24,7 @@
         "Ovos",
         "Leite"
       ],
-      "instrucoes": "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
-      "photo": "images/boloChocolatejpg" 
+      "instrucoes": "Misture os ingredientes, asse no forno e decore com chocolate derretido."
     },
     {
       "id": 3,
@@ -39,8 +37,7 @@
         "Ovos",
         "Leite"
       ],
-      "instrucoes": "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
-      "photo": "images/kibeRecheado.jpg" 
+      "instrucoes": "Misture os ingredientes, asse no forno e decore com chocolate derretido."
     },
     {
       "id": 4,
@@ -53,8 +50,7 @@
         "Ovos",
         "Leite"
       ],
-      "instrucoes": "Misture os ingredientes, asse no forno e decore com chocolate derretido.",
-      "photo": "images/canelone.jpg" 
+      "instrucoes": "Misture os ingredientes, asse no forno e decore com chocolate derretido."
     }
   ]
   
