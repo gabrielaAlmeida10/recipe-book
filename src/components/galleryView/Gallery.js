@@ -39,7 +39,6 @@ const Gallery = () => {
             className="recipe"
             onClick={() => showDetails(recipe)}
           >
-            <img src={recipe.photo}  alt={`Foto de ${recipe.nome}`} />
             <h3>{recipe.nome}</h3>
           </div>
         ))}
@@ -47,7 +46,6 @@ const Gallery = () => {
       {selectedRecipe && (
         <div className="details">
           <button onClick={closeDetails}>X</button>
-          <img src={selectedRecipe.photo} alt={`Foto de ${selectedRecipe.nome}`}/>
           <h2>{selectedRecipe.nome}</h2>
           <p>Ingredientes: {selectedRecipe.ingredientes.join(", ")}</p>
           <p>Recheio: {selectedRecipe.recheio}</p>

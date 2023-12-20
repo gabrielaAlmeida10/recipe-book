@@ -8,7 +8,7 @@ body{
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 10px;
   text-align: center;
-  background-color: #FFEBCD;
+  background-color: rgb(183 213 255);
   padding: 14px;
 }
 
