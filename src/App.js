@@ -2,7 +2,7 @@ import React from "react";
 import Routes from "./routes";
 import { BrowserRouter } from "react-router-dom";
 
-import Menu from "./components/Menu/menu";
+import Menu from "./components/menu/Menu";
 
 import "./App.css";
 

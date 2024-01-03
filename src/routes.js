@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import Gallery from "./components/GalleryView/gallery";
 import NewRecipe from "./components/NewRecipe/newRecipe";
-import NewOrder from "./components/NewOrder/newOrder";
+import NewOrder from "./components/newOrder/NewOrder";
 import OrderList from "./components/OrderList/orderList";
 import Login from "./components/Login/login";
 import Register from "./components/Register/register";
