@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-import GalleryFilter from "./GalleryFilter";
+import GalleryFilter from "./galleryFilter";
 import recipes from "../../data/recipes.json";
 
-import "./GalleryView.css";
+import "./galleryView.css";
 
 const Gallery = () => {
   const [recipe, setRecipe] = useState([]);

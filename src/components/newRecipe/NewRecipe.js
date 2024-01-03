@@ -1,8 +1,8 @@
 // NewRecipe.js
 import React  from "react";
-import RecipeForm from "./RecipeForm";
+import RecipeForm from "./recipeForm";
 
-import "./NewRecipe.css";
+import "./newRecipe.css";
 
 const NewRecipe = (props) => {
 

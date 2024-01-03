@@ -1,7 +1,7 @@
 // RecipeForm.js
 import React, { useState } from "react";
 
-import "./RecipeForm.css";
+import "./recipeForm.css";
 
 const RecipeForm = (props) => {
   const [name, setName] = useState("");

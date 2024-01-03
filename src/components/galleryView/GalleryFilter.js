@@ -1,4 +1,4 @@
-import "./GalleryFilter.css";
+import "./galleryFilter.css";
 import React from "react";
 
 const GalleryFilter = ({onFilterChange}) => { //destructuring the object, to extract a especific prop

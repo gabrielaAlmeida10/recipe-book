@@ -1,10 +1,12 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-import Gallery from "./components/galleryView/Gallery";
-import NewRecipe from "./components/newRecipe/NewRecipe";
-import NewOrder from "./components/newOrder/newOrder";
-import OrderList from "./components/orderList/orderList";
+import Gallery from "./components/GalleryView/gallery";
+import NewRecipe from "./components/NewRecipe/newRecipe";
+import NewOrder from "./components/NewOrder/newOrder";
+import OrderList from "./components/OrderList/orderList";
+import Login from "./components/Login/login";
+import Register from "./components/Register/register";
 
 function routes() {
   return (
@@ -14,6 +16,8 @@ function routes() {
        <Route path="/NewRecipe" element={<NewRecipe />} />
        <Route path="/NewOrder" element={<NewOrder />} />
        <Route path="/OrderList" element={<OrderList />} />
+       <Route path="/Login" element={<Login />} />
+       <Route path="/Register" element={<Register />} /> 
     </Routes>
   );
 }
