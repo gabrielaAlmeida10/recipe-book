@@ -9,6 +9,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import Menu from "./components/menu/Menu";
 
 import "./App.css";
+import Footer from "./components/Footer/footer";
 
 const App = () => {
   const [user, setUser] = useState(undefined);
@@ -32,6 +33,7 @@ const App = () => {
       <BrowserRouter>
         <Menu />
         <Routes />
+        {/* <Footer /> */}
       </BrowserRouter>
     </AuthProvider>
   );
