@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useAuthentication } from "../../hooks/useAuthentication";
 import { useAuthValue } from "../../context/authContext";
 
+import LogoutButton from "../Login/logout";
+
 import "./Menu.css";
 
 const Menu = () => {
@@ -25,10 +27,14 @@ const Menu = () => {
             <Link to="/NewOrder">
               <h3>New Order</h3>
             </Link>
+            <LogoutButton />
           </>
         )}
         {!user && (
           <>
+            <Link to="/recipe-book">
+              <h1>Recipe Book</h1>
+            </Link>
             <Link to="/login">
               <h3>Login</h3>
             </Link>
