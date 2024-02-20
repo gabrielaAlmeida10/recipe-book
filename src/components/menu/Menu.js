@@ -13,11 +13,11 @@ const Menu = () => {
   return (
     <nav className="menu">
       <div className="brand-name">
+        <Link to="/recipe-book">
+          <h1>Recipe Book</h1>
+        </Link>
         {user && (
           <>
-            <Link to="/recipe-book">
-              <h1>Recipe Book</h1>
-            </Link>
             <Link to="/NewRecipe">
               <h3>New Recipe</h3>
             </Link>
@@ -27,14 +27,13 @@ const Menu = () => {
             <Link to="/NewOrder">
               <h3>New Order</h3>
             </Link>
-            <LogoutButton />
+            
           </>
         )}
+      </div>
+      <div className="auth-links">
         {!user && (
           <>
-            <Link to="/recipe-book">
-              <h1>Recipe Book</h1>
-            </Link>
             <Link to="/login">
               <h3>Login</h3>
             </Link>
@@ -43,6 +42,7 @@ const Menu = () => {
             </Link>
           </>
         )}
+        {user && <LogoutButton className="button" />}
       </div>
     </nav>
   );
