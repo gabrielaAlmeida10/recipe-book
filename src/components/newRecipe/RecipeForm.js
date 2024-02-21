@@ -6,8 +6,9 @@ import "./recipeForm.css";
 const RecipeForm = (props) => {
   const [name, setName] = useState("");
   const [tipo, setTipo] = useState("");
-  const [ingredientes, setIngredientes] = useState("");
-  const [preparo, setPreparo] = useState("");
+  //const [image, setImage] = useState("");
+  const [ingredientes, setIngredientes] = useState([]);
+  const [preparo, setPreparo] = useState([]);
 
   const nameChangeHandler = (event) => {
     setName(event.target.value);
@@ -47,11 +48,11 @@ const RecipeForm = (props) => {
       <div className="new-recipe__controls">
         <div className="new-recipe__control">
           <label>Name: </label>
-          <input type="text" value={name} onChange={nameChangeHandler} />
+          <input type="text" required value={name} onChange={nameChangeHandler} />
         </div>
         <div className="new-recipe__control">
           <label>Tipo:</label>
-          <select value={tipo} onChange={tipoChangeHandler}>
+          <select required value={tipo} onChange={tipoChangeHandler}>
             <option value="option1">Option 1</option>
             <option value="option2">Option 2</option>
             <option value="option3">Option 3</option>

@@ -16,6 +16,7 @@ const NewRecipe = (props) => {
 
   return (
     <div className="new-recipe">
+      <h2>Adicionar Nova Receita</h2>
       <RecipeForm onSaveRecipeData={saveRecipeDataHandler} />
     </div>
   );
