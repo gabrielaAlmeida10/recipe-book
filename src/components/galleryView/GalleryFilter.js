@@ -11,6 +11,7 @@ const GalleryFilter = ({onFilterChange}) => { //destructuring the object, to ext
                 {typesOfRecipes.map((type, index) => (
                     <li key={index}>
                         <button onClick={() => onFilterChange(type)}>{type}</button>
+                        <hr></hr>
                     </li>
                 ))}
             </ul>

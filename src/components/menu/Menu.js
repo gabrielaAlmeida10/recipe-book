@@ -42,7 +42,7 @@ const Menu = () => {
             </Link>
           </>
         )}
-        {user && <LogoutButton className="button" />}
+        {user && <LogoutButton/>}
       </div>
     </nav>
   );

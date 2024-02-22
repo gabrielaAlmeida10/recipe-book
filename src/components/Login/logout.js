@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"; // Importando o useNavigate
 import { useAuthentication } from "../../hooks/useAuthentication";
 import { signOut } from "firebase/auth";
 
+import './logout.css';
 
 const LogoutButton = () => {
   const { auth } = useAuthentication();
@@ -18,7 +19,7 @@ const LogoutButton = () => {
     }
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return <button onClick={handleLogout} className="button">Logout</button>;
 };
 
 export default LogoutButton;

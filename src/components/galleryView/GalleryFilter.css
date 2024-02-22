@@ -1,13 +1,31 @@
 .filter {
-  background-color: rgb(179, 218, 255);
+  background-color: rgb(255, 255, 179);
   float: left;
   width: 15%;
-  height: 100vh;
+  height: 90vh;
   margin-right: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(217, 179, 140);
   display: flex;
   flex-direction: column;
 }
 
+button{
+  background-color: rgb(255, 255, 179);
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px; 
+  margin-right: 10px;
+  box-shadow: none;
+}
 
+ul {
+  list-style-type: none;
+}
+
+hr{
+  background-color: rgb(217, 179, 140);
+}

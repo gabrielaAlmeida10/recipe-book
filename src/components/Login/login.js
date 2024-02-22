@@ -16,8 +16,8 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      // Redirecionando para a página principal após o login
-      navigate("/"); // Navegando para a rota especificada
+      // Redirect to the initial page
+      navigate("/"); // navigating to the specifc route
     } catch (error) {
       console.error("Erro ao fazer login:", error);
     }

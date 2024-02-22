@@ -25,13 +25,17 @@ const Gallery = () => {
 
   const filterRecipe = (type) => {
     setFilter(type);
-  }
+  };
 
-  const filteredRecipes = filter === "Todos" ? recipe : recipe.filter(recipe => recipe.type === filter);
+  const filteredRecipes =
+    filter === "Todos"
+      ? recipe
+      : recipe.filter((recipe) => recipe.type === filter);
 
   return (
     <div className="gallery-container">
-      <GalleryFilter onFilterChange={filterRecipe}/>
+      <GalleryFilter onFilterChange={filterRecipe} />
+      <h1>Caderno de Receitas</h1>
       <div className="gallery">
         {filteredRecipes.map((recipe) => (
           <div
